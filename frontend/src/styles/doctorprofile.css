@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-blue: #3C82F4;
+  --primary-pink: #FF6BAA;
+  --text-dark: #2C3E50;
+  --background-light: #F8F9FA;
+  --card-bg: #FFFFFF;
+  --border-radius: 16px;
+  --star-color: #f4c150;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+.doctor-profile-container {
+  max-width: 950px;
+  margin: 40px auto;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  margin-top: 95px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+.profile-header {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 24px;
+  padding-left: 15px;
+}
+
+.profile-avatar {
+  width: 110px;
+  height: 110px;
+  font-size: 48px;
+  color: #fff;
+  font-weight: 600;
+  margin-left: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.profile-avatar.male {
+  background: linear-gradient(135deg, #4A90E2, #3C82F4);
+}
+
+.profile-avatar.female {
+  background: linear-gradient(135deg, #FF85B3, #FF6BAA);
+}
+
+.profile-header h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 3px;
+  padding-left: 19px;
+  padding-bottom: 0px;
+
+}
+
+.profile-header .specialty {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e41c6c;
+  padding-left: 35px;
+ 
+}
+
+.profile-header .education {
+  font-size: 16px;
+  color: #555;
+  padding-left: 19px;
+
+
+}
+
+.profile-header .bio {
+  font-size: 16px;
+  color: #444;
+  padding-left: 19px;
+
+  max-width: 500px;
+}
+
+.profile-header .info {
+  display: flex;
+  gap: 16px;
+  font-size: 16px;
+  padding-left: 19px;
+
+  color: #777;
+}
+
+.profile-header .info svg {
+  margin-right: 6px;
+  padding-left: 19px;
+  color: var(--primary-blue);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding-left: 19px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.rating .star {
+  color: var(--star-color);
+  margin-right: 6px;
+  padding-left: 15px;
+  font-size: 18px;
+  
+}
+
+.step-tracker-container {
+  position: relative;
+  margin: 40px 0 50px;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Top progress line */
+.step-progress-bar {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #e4e4e4;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.step-progress-fill {
+  height: 100%;
+  width: var(--progress, 0%);
+  background: linear-gradient(to right, #ff5f8d, #ff9966);
+  transition: width 0.4s ease;
+  border-radius: 2px;
+}
+
+/* Step numbers and labels */
+.step-tracker {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+/* Circle number */
+.step-number {
+  width: 40px;
+  height: 40px;
+  margin-top: 45px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Active step style */
+.step.active .step-number {
+  background: linear-gradient(to right, #ff5f8d, #ff9966);
+  color: white;
+}
+
+.step-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+
+/* Wrapper Sections */
+.calendar-wrapper,
+.timeslot-wrapper,
+.confirm-wrapper {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 16px;
+  justify-items: center;
+  margin: 20px 0;
+}
+
+.calendar-grid button {
+  background-color: #ffffff;
+  border: none;
+  padding: 25px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 16px;
+  color: #3a6da0;
+}
+
+.calendar-grid button:hover {
+  background: linear-gradient(135deg, #ed2f97, #9915eb);
+  color: white;
+  font-weight: 600;
+}
+
+.calendar-grid .selected {
+  background-color: #ff4081;
+  color: white;
+  font-weight: 700;
+}
+
+/* Timeslots */
+.timeslots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.timeslots button {
+  background-color: #ffffff;
+  border: none;
+  padding: 15px;
+  border-radius: 20px;
+  width: 150px;
+  border:1px solid rgb(219, 218, 218);
+  height: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 16px;
+  color: #3a6da0;
+}
+
+.timeslots button:hover {
+  background: linear-gradient(135deg, #ed2f97, #d11cd1);
+  color: white;
+  font-weight: 600;
+}
+
+.timeslots .selected {
+  background-color: #ff4081;
+  color: white;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.nav-buttons button {
+  padding: 15px 26px;
+  background-color: #e0e0e0;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-buttons button:hover {
+  background: #1c60d1;
+}
+
+/* Label styling */
+.confirm-wrapper label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #2f2f2f;
+  margin-bottom: 12px;
+  font-size: 16px;
+
+}
+
+/* Select and textarea shared styles */
+.confirm-wrapper select,
+.confirm-wrapper textarea {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  padding: 14px 16px;
+  border: 1px solid #d6d9de;
+  border-radius: 10px;
+  background-color: #f9fafb;
+  color: #2f2f2f;
+  margin-bottom: 24px;
+  transition: border 0.3s ease;
+  box-sizing: border-box;
+ 
+}
+
+/* Hover and focus effect */
+.confirm-wrapper select:focus,
+.confirm-wrapper textarea:focus {
+  outline: none;
+  border-color: #ff4081;
+  background-color: #ffffff;
+}
+
+/* Textarea specific tweaks */
+.confirm-wrapper textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+
+/* Confirm Booking Button */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.nav-buttons button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-buttons button:last-child {
+  background: linear-gradient(to right, #ff4081, #ff8a00);
+  color: white;
+}
+
+.nav-buttons button:last-child:hover {
+  opacity: 0.9;
+}
+
+.nav-buttons button:first-child {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.nav-buttons button:first-child:hover {
+  background-color: #e0e0e0;
+}

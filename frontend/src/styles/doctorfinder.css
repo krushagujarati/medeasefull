@@ -1,0 +1,199 @@
+/* Importing Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.doctor-finder {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.doctor-finder h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.doctor-finder p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.filters select,
+.filters button {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  min-width: 150px;
+  font-size: 14px;
+}
+
+.filter-button {
+  background-color: #ff4081;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #e73370;
+}
+
+.doctor-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.doctor-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  border-left: 6px solid transparent;
+}
+
+
+.male-card .avatar {
+  background-color: #2196f3;
+}
+
+.female-card .avatar {
+  background-color: #e91e63;
+}
+
+.male-card button {
+  background-color: #2196f3;
+}
+
+.male-card button:hover {
+  background-color: #1976d2;
+}
+
+.female-card button {
+  background-color: #e91e63;
+}
+
+.female-card button:hover {
+  background-color: #c2185b;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.doctor-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 5px 0;
+  color: #333;
+}
+
+.doctor-card p {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.info {
+  font-size: 13px;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.rating {
+  color: #ffb400;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.rating .star {
+  font-size: 16px;
+}
+
+.doctor-card button {
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.no-results {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.pagination button {
+  background: #ff4081;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 14px;
+}

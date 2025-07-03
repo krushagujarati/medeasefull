@@ -1,0 +1,127 @@
+.appointment-container {
+  background: #fff;
+  padding: 24px;
+  margin-top: 100px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.step-indicator > div {
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+  border-radius: 100px;
+  background: #eee;
+  color: #666;
+}
+
+.step-indicator .active {
+  background: linear-gradient(to right, #ff4081, #ff6e40);
+  color: white;
+  font-weight: 600;
+}
+
+.calendar-wrapper, .timeslot-wrapper, .confirm-wrapper {
+  margin-top: 20px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.calendar-grid button {
+  padding: 12px;
+  border: none;
+  border-radius: 50%;
+  background: #f2f2f2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.calendar-grid button.selected,
+.calendar-grid button:hover {
+  background: #ff4081;
+  color: white;
+}
+
+.timeslots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.timeslots button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.timeslots button.selected {
+  background: #ff4081;
+  color: white;
+  border-color: transparent;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-buttons button {
+  background: linear-gradient(to right, #ff4081, #ff6e40);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-buttons button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 500;
+}
+
+.form select, .form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.confirmation-message {
+  font-size: 18px;
+  text-align: center;
+  color: #4caf50;
+  padding: 40px;
+  background: #f0fff4;
+  border: 1px solid #c8e6c9;
+  border-radius: 12px;
+}

@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.howitworks-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 40px;
+  background: #fafcfe;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  animation: fadeInUp 1s ease;
+  
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  font-size: 18px;
+  margin-top: 3px;
+  margin-bottom: 30px;
+  animation: fadeInUp 1.2s ease;
+}
+
+.howitworks-wrapper {
+  display: flex;
+  max-width: 1400px;
+  margin: auto;
+  background: linear-gradient(135deg, #fa95da, #76b9fb);
+  animation: gradientAnimation 15s ease infinite;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+p{
+  font-size:medium;
+  color: #393939;
+}
+/* 📘 Left Panel - Booking Steps */
+.steps {
+  background: #f8ebf2;
+  padding: 27px;
+  width: 100px;
+  padding-top: 12px;
+  flex: 1;
+  min-width: 250px;
+  margin:30px ;
+  margin-left: 50px;
+  border-radius: 18px;
+  margin-right: 0px;
+  font-weight: 600;
+  color: #ffc0f7;
+  border-left: 4px solid #ffc0f7;
+  opacity: 1;
+}
+
+.steps h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #373737;
+}
+.steps li:hover{
+  color: #105769;
+    font-weight: 600;
+  font-size: 17px;
+  transform: scale(1.01);
+}
+
+.steps ul {
+  list-style: none;
+  padding: 0;
+}
+
+.steps li {
+  font-size: 16px;
+  margin-bottom: 13px;
+  color: #2d2d2d;
+  display: flex;
+  align-items: center;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #bdc3d2;
+  color: rgb(101, 101, 101);
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 14px;
+}
+
+.step_number li:hover{
+  background-color: #173766;
+}
+
+
+.help-section {
+  margin-top: 50px;
+  color: #444;
+  font-size: 18px;
+  padding-top: 40px;
+  font-weight: 500;
+  
+}
+
+.support-text {
+  
+  font-weight: 400;
+  font-size: 14px;
+
+}
+
+.phone {
+  font-weight: 600;
+  color: #3104e7;
+  display: flex;
+  padding-top: 2px;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 📗 Right Panel - Services */
+.services {
+  flex: 2; 
+  padding: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin: 35px;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.services h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #1a1a1a;
+}
+
+.service-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 50px;
+  border-radius: 18px;
+  background: #f6fcff;
+  transition: all 0.35s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+}
+
+.service-card:hover {
+  background: #ffffff;
+  transform: scale(1.04);
+  
+}
+
+.service-card.selected {
+  border-color: #ff7dd1;
+  background: #ffeaf5;
+}
+
+.service-card h4 {
+  margin: 0 0 5px 0;
+  color: #222;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.icon {
+  font-size: 28px;
+  margin-right: 16px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.icon.blue { color: #1d4ed8; }
+.icon.purple { color: #ff14b1; }
+.icon.green { color: #13ff69; }
+.icon.yellow { color: #e8fc07; }
+
+/* 🟣 Button */
+.continue-btn {
+  margin-top: 40px;
+  padding: 14px 30px;
+  background: linear-gradient(to right, #ff6dc1, #8b72ff);
+  border: none;
+  color: white;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+}
+
+.continue-btn:hover {
+  background: linear-gradient(to right, #f96cc4, #7267ff);
+  transform: translateY(-2px);
+}
+
+.continue-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 🌈 Animations */
+@keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
