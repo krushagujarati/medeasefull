@@ -34,7 +34,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/auth/profile", {
+        const res = await axios.get("https://medeasefull.onrender.com/api/auth/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -109,7 +109,7 @@ const Profile = () => {
         });
       }
 
-      await axios.put("http://localhost:5000/api/auth/profile", updatedFields, {
+      await axios.put("https://medeasefull.onrender.com/api/auth/profile", updatedFields, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

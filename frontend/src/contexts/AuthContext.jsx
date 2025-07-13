@@ -26,12 +26,12 @@ export const AuthProvider = ({ children }) => {
 
   // Simulated login (replace with real API)
   const login = async (email, password) => {
-  const res = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+  const res = await axios.post("https://medeasefull.onrender.com/api/auth/login", { email, password });
   const token = res.data.token;
   localStorage.setItem("token", token);
 
   // Fetch full profile
-  const profileRes = await axios.get("http://localhost:5000/api/auth/profile", {
+  const profileRes = await axios.get("https://medeasefull.onrender.com/api/auth/profile", {
     headers: { Authorization: `Bearer ${token}` },
   });
 
